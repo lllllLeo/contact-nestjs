@@ -1,10 +1,6 @@
 # compiled output
 /dist
-/back-end/node_modules
-/front-end/node_modules
-
-# env
-/back-end/.env
+/node_modules
 
 # Logs
 logs

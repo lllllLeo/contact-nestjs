@@ -8,7 +8,13 @@ export class ContactService {
 	constructor(private readonly prismaService: PrismaService) {}
   
 	getAllContacts() {
-		return this.prismaService.contact.findMany();
+		return this.prismaService.contact.findMany({
+			orderBy: [
+				{
+					id: 'desc',
+				}
+			]
+		});
   }
 	
 	getContact(id: number) {
